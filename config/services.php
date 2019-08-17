@@ -34,4 +34,8 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
+    'gravatar' => [
+        'url' => env('GRAVATAR_URL', 'https://www.gravatar.com/avatar/{hash}?d=mp'),
+    ],
+
 ];
