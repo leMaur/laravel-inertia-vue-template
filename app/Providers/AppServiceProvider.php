@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
             'app' =>[
                 'name' => Config::get('app.name'),
             ],
-            'auth' => function() {
+            'auth' => function () {
                 return [
                     'user' => Auth::user() ? [
                         'id' => Auth::user()->id,
