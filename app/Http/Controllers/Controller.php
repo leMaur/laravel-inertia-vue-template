@@ -25,6 +25,17 @@ class Controller extends BaseController
             return Str::studly($page);
         })->implode(DIRECTORY_SEPARATOR);
 
-        return Inertia::render($vuePage)->withViewData('noscript', 'noscripts.'.$page);
+        $seoData = $this->seoData();
+
+        return Inertia::render($vuePage)
+            ->with('seo', $seoData) // used by Layout.vue
+            ->withViewData('seo', $seoData) // used by app.blade.php
+            ->withViewData('noscript', 'noscripts.'.$page);
+    }
+
+    protected function seoData(): array
+    {
+        // TODO - extract SEO data
+        return [];
     }
 }
