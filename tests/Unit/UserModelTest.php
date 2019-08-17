@@ -13,9 +13,8 @@ class UserModelTest extends TestCase
     /** @test */
     public function it_returns_the_avatar_url_based_on_email_address()
     {
-        $user = factory(User::class)->create();
-        $hash = md5(strtolower(trim($user->email)));
+        $user = factory(User::class)->create(['email' => 'john@example.com']);
 
-        $this->assertEquals("https://www.gravatar.com/avatar/{$hash}?d=mp", $user->avatar);
+        $this->assertEquals("https://www.gravatar.com/avatar/d4c74594d841139328695756648b6bd6?d=mp", $user->avatar);
     }
 }
