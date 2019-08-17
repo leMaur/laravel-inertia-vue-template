@@ -1,6 +1,8 @@
-import { InertiaApp } from '@inertiajs/inertia-vue'
+import {InertiaApp} from '@inertiajs/inertia-vue'
 import Vue from 'vue'
 
+Vue.config.productionTip = false
+Vue.mixin({ methods: { route: (...args) => window.route(...args).url() } })
 Vue.use(InertiaApp)
 
 const app = document.getElementById('app')
