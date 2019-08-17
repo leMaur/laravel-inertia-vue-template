@@ -12,7 +12,8 @@
         "fideloper/proxy": "^4.0",
         "inertiajs/inertia-laravel": "^0.1.0",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "stechstudio/laravel-php-cs-fixer": "^1.2"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "dev-master",
