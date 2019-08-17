@@ -1,7 +1,7 @@
 <template>
   <layout>
-    <h1>Hello!</h1>
-    <inertia-link :href="route('about')">About page</inertia-link>
+    <h1>About</h1>
+    <inertia-link :href="route('welcome')">Welcome page</inertia-link>
   </layout>
 </template>
 
